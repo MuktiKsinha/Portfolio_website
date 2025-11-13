@@ -1,0 +1,110 @@
+/* Resume-specific overrides and print styles */
+
+/* Layout: constrain main content to resume width */
+#main > .inner {
+  max-width: 55rem; /* ~880px */
+  padding: 1.5rem 2rem;
+}
+
+/* Make section spacing tighter for resume look */
+#main > .inner > section {
+  padding: 1.25rem 0;
+  border-top: none;
+}
+
+/* Header tweaks */
+header#header .logo {
+  font-size: 1.25rem;
+}
+header#header ul.icons { margin-top: 0.5rem; }
+
+/* Simplify features/posts for linear resume flow */
+.features, .posts {
+  display: block;
+  margin: 0 0 1rem 0;
+  width: 100%;
+}
+.features article, .posts article {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+.features article .icon { display: none; }
+
+/* Make buttons more prominent for download */
+.button.big {
+  background-color: #f56a6a;
+  color: #fff !important;
+  box-shadow: none;
+  border-radius: 0.25rem;
+}
+
+/* Contact list smaller and tighter */
+ul.contact li {
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* Print styles: hide non-essential UI and show links inline */
+@media print {
+  /* clean page */
+  body, html { background: #ffffff; color: #000; }
+
+  /* hide sidebar, navigation, and buttons */
+  #sidebar, .icons, .toggle, ul.actions, .button { display: none !important; }
+
+  /* remove images for a compact resume */
+  img { display: none !important; }
+
+  /* Ensure main area uses full printable width */
+  #main > .inner { max-width: 100%; padding: 0; }
+
+  /* make headings black and normal weight for print */
+  h1, h2, h3, h4 { color: #000; font-weight: 700; }
+
+  /* show link URLs after link text */
+  a[href]:after { content: " (" attr(href) ")"; color: #000; }
+
+  /* avoid page breaks inside experience/project items */
+  .posts article, .features article { page-break-inside: avoid; }
+}
+
+/* Print header: hidden on screen, visible in print */
+#print-header { display: none; }
+
+@media print {
+  /* show print header and pin to top */
+  #print-header { display: block; position: fixed; top: 0; left: 0; right: 0; background: #fff; border-bottom: 1px solid #000; z-index: 9999; }
+  #print-header .print-inner { max-width: 100%; padding: 0.6rem 1rem; font-size: 12pt; color: #000; }
+
+  /* hide the on-screen header to avoid duplication */
+  header#header { display: none !important; }
+
+  /* ensure content doesn't overlap the fixed print header */
+  #main > .inner { margin-top: 2.2rem; }
+}
+
+/* Profile photo styles */
+.profile-photo {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Small avatar for header */
+.header-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+/* Ensure other images scale nicely */
+.image img {
+  max-width: 100%;
+  height: auto;
+}
