@@ -4,6 +4,12 @@
 #main > .inner {
   max-width: 55rem; /* ~880px */
   padding: 1.5rem 2rem;
+  margin-left: 2rem; /* Add left indentation */
+}
+
+/* Reduce gap between sidebar and main */
+#wrapper {
+  gap: 1rem !important; /* Reduce gap between main and sidebar */
 }
 
 /* Make section spacing tighter for resume look */

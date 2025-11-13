@@ -45,60 +45,159 @@
 						</ul>
 					</header>
 
-					<!-- Banner -->
-					<section id="about">
-						<div class="content">
-							<header>
-								<h1 style="font-size: 2rem;">Mukti Kumar Sinha<br />
-								<span style="font-size:1.1rem; font-weight:400;">Business & Data Analytics Lead — Aspiring Data Scientist</span></h1>
-								<p>Experienced analytics leader with a strong background in financial datasets, ETL, SQL and analytical modelling. I build data-driven solutions, lead cross-functional teams, and deliver actionable insights that drive business value.</p>
-							</header>
-							<p>Core strengths: Data analysis & stewardship, SQL & ETL design, dashboarding & reporting, stakeholder management, mentoring teams, and building ML-ready datasets. Actively expanding machine learning and MLOps skills.</p>
-							<ul class="actions">
-								<li><a href="assets/resume.pdf" class="button big" download>Download Resume (PDF)</a></li>
-							</ul>
-						</div>
-						<span class="image object">
-							<img src="images/Mukti.jpg" class="profile-photo" alt="Mukti Kumar Sinha — photo" />
-						</span>
-					</section>
-
-					<!-- Skills -->
-					<section id="skills">
-						<header class="major">
-							<h2>Skills</h2>
+				<!-- Banner -->
+				<section id="about" style="display: flex; gap: 2rem; align-items: flex-start;">
+					<div class="content" style="flex: 1;">
+						<header>
+							<h1 style="font-size: 2rem;">Mukti Kumar Sinha<br />
+							<span style="font-size:1.1rem; font-weight:400;">Business & Data Analytics Lead — Aspiring Data Scientist</span></h1>
+							<p>Experienced analytics leader with a strong background in financial datasets, ETL, SQL and analytical modelling. I build data-driven solutions, lead cross-functional teams, and deliver actionable insights that drive business value.</p>
 						</header>
+						<p>Core strengths: Data analysis & stewardship, SQL & ETL design, dashboarding & reporting, stakeholder management, mentoring teams, and building ML-ready datasets. Actively expanding machine learning and MLOps skills.</p>
+						<ul class="actions">
+							<li><a href="assets/resume.pdf" class="button big" download>Download Resume (PDF)</a></li>
+						</ul>
+					</div>
+					<div style="flex-shrink: 0;">
+						<img src="images/Mukti.jpg" class="profile-photo" alt="Mukti Kumar Sinha — photo" />
+					</div>
+				</section>
+
+				<!-- Skills -->
+				<section id="skills">
+					<header class="major">
+						<h2>Skills</h2>
+					</header>
+
+					<!-- Skill Category Tabs -->
+					<div style="margin-bottom: 2em;">
+						<ul style="list-style: none; padding: 0; display: flex; gap: 0.5em; flex-wrap: wrap; border-bottom: 2px solid #e0e0e0;">
+							<li>
+								<a href="#" class="skill-tab active" data-skill="technical" style="display: inline-block; padding: 0.75em 1.25em; border-bottom: 3px solid #0066cc; font-weight: 600; color: #0066cc; text-decoration: none; cursor: pointer; font-size: 0.95em;">
+									Technical
+								</a>
+							</li>
+							<li>
+								<a href="#" class="skill-tab" data-skill="nontechnical" style="display: inline-block; padding: 0.75em 1.25em; border-bottom: 3px solid transparent; font-weight: 600; color: #666; text-decoration: none; cursor: pointer; font-size: 0.95em;">
+									Non-Technical
+								</a>
+							</li>
+							<li>
+								<a href="#" class="skill-tab" data-skill="analytics" style="display: inline-block; padding: 0.75em 1.25em; border-bottom: 3px solid transparent; font-weight: 600; color: #666; text-decoration: none; cursor: pointer; font-size: 0.95em;">
+									Analytics
+								</a>
+							</li>
+							<li>
+								<a href="#" class="skill-tab" data-skill="leadership" style="display: inline-block; padding: 0.75em 1.25em; border-bottom: 3px solid transparent; font-weight: 600; color: #666; text-decoration: none; cursor: pointer; font-size: 0.95em;">
+									Leadership
+								</a>
+							</li>
+							<li>
+								<a href="#" class="skill-tab" data-skill="tools" style="display: inline-block; padding: 0.75em 1.25em; border-bottom: 3px solid transparent; font-weight: 600; color: #666; text-decoration: none; cursor: pointer; font-size: 0.95em;">
+									Tools
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Technical Skills -->
+					<div id="technical-skills" class="skill-category" style="display: block;">
 						<div class="features">
 							<article>
 								<span class="icon fa-code"></span>
 								<div class="content">
-									<h3>Technical</h3>
-									<p>SQL, Python (pandas, scikit-learn), ETL pipelines, data modelling, Git, basic MLOps.</p>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-chart-line"></span>
-								<div class="content">
-									<h3>Analytics</h3>
-									<p>Exploratory analysis, statistical modelling, dashboarding (Power BI / Tableau), KPI definition.</p>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-users"></span>
-								<div class="content">
-									<h3>Leadership</h3>
-									<p>Team leadership, stakeholder communication, project delivery, mentoring junior analysts.</p>
-								</div>
-							</article>
-							<article>
-								<span class="icon solid fa-cogs"></span>
-								<div class="content">
-									<h3>Tools</h3>
-									<p>JIRA, Confluence, Excel (advanced), SQL Server, BigQuery (familiar), GitHub.</p>
+									<h3>Technical Skills</h3>
+									<p>SQL, Python (pandas, scikit-learn), ETL pipelines, data modelling, Git, basic MLOps, Apache Spark fundamentals.</p>
 								</div>
 							</article>
 						</div>
-					</section>
+					</div>
+
+					<!-- Non-Technical Skills -->
+					<div id="nontechnical-skills" class="skill-category" style="display: none;">
+						<div class="features">
+							<article>
+								<span class="icon solid fa-comments"></span>
+								<div class="content">
+									<h3>Non-Technical Skills</h3>
+									<p>Problem-solving, critical thinking, business acumen, adaptability, attention to detail, documentation best practices.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- Analytics Skills -->
+					<div id="analytics-skills" class="skill-category" style="display: none;">
+						<div class="features">
+							<article>
+								<span class="icon solid fa-chart-line"></span>
+								<div class="content">
+									<h3>Analytics & Data Skills</h3>
+									<p>Exploratory data analysis, statistical modelling, A/B testing, dashboarding (Power BI / Tableau), KPI definition, data visualization, predictive analytics.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- Leadership Skills -->
+					<div id="leadership-skills" class="skill-category" style="display: none;">
+						<div class="features">
+							<article>
+								<span class="icon solid fa-users"></span>
+								<div class="content">
+									<h3>Leadership & Management</h3>
+									<p>Team leadership, stakeholder communication, project delivery, mentoring junior analysts, cross-functional collaboration, requirement gathering.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+
+					<!-- Tools Skills -->
+					<div id="tools-skills" class="skill-category" style="display: none;">
+						<div class="features">
+							<article>
+								<span class="icon solid fa-cogs"></span>
+								<div class="content">
+									<h3>Tools & Platforms</h3>
+									<p>JIRA, Confluence, Excel (advanced), SQL Server, BigQuery, GitHub, Power BI, Tableau, Airflow (familiar), Databricks.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Skill Tab Switching Script -->
+				<script>
+					document.addEventListener('DOMContentLoaded', function() {
+						const tabs = document.querySelectorAll('.skill-tab');
+						const categories = document.querySelectorAll('.skill-category');
+
+						tabs.forEach(tab => {
+							tab.addEventListener('click', function(e) {
+								e.preventDefault();
+								const skillType = this.getAttribute('data-skill');
+
+								// Hide all categories
+								categories.forEach(cat => {
+									cat.style.display = 'none';
+								});
+
+								// Remove active style from all tabs
+								tabs.forEach(t => {
+									t.style.borderBottomColor = 'transparent';
+									t.style.color = '#666';
+								});
+
+								// Show selected category
+								document.getElementById(skillType + '-skills').style.display = 'block';
+
+								// Add active style to clicked tab
+								this.style.borderBottomColor = '#0066cc';
+								this.style.color = '#0066cc';
+							});
+						});
+					});
+				</script>
 
 					<!-- Experience -->
 					<section id="experience">
