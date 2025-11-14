@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comming soon 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Smooth Scroll -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- Main Design Enhancements -->
+    <style>
+        body {
+            background: #f5f7fa;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .project-wrapper {
+            max-width: 1200px;
+            margin: auto;
+            padding: 3rem 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* -----------------------
+           LEFT CONTENT AREA
+        ----------------------- */
+        .project-content {
+            flex: 1.2;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .project-header img {
+            width: 380px;
+            border-radius: 14px;
+            box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: .5rem;
+        }
+
+        h2 {
+            margin-top: 2.5rem;
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            margin: .2rem 0 1rem 0;
+            color: #666;
+            font-weight: 500;
+        }
+
+        p, li {
+            font-size: 1.08rem;
+            line-height: 1.75;
+        }
+
+        hr {
+            margin: 2rem 0;
+            opacity: 0.25;
+        }
+
+        /* -----------------------
+           RIGHT SIDEBAR NAVIGATION
+        ----------------------- */
+        .sidebar-nav {
+            flex: 0.4;
+            position: sticky;
+            top: 3rem;
+            height: fit-content;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+            animation: fadeIn 1.2s ease;
+        }
+
+        .sidebar-nav h4 {
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-nav a {
+            display: block;
+            margin: 0.6rem 0;
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 4px;
+            border-left: 3px solid transparent;
+            transition: all .2s ease;
+        }
+
+        .sidebar-nav a.active {
+            border-left: 3px solid #4a90e2;
+            color: #4a90e2;
+            font-weight: 600;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .project-wrapper {
+                flex-direction: column;
+            }
+            .sidebar-nav {
+                position: relative;
+                top: auto;
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* -----------------------
+            CODE BLOCK STYLING
+        ----------------------- */
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="project-wrapper">
+
+    <!-- RIGHT SIDEBAR MENU -->
+    <aside class="sidebar-nav">
+        <h4>On This Page</h4>
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#technical">Technical Breakdown</a>
+        <a href="#results">Results</a>
+        <a href="#code">Code Samples</a>
+        <a href="#screenshots">Screenshots</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="project-content">
+
+        <a href="index.html" class="button small back-btn">← Back to Portfolio</a>
+
+        <div class="project-header">
+            <div>
+                <h1>Project Title</h1>
+                <h3>Industry Project</h3>
+                <p>
+                    A short executive summary describing the background, goals, 
+                    and value delivered by the project.
+                </p>
+            </div>
+
+            <img src="assets/images/project-image.jpg" alt="Project Image">
+        </div>
+
+        <hr>
+
+        <!-- PROBLEM -->
+        <section id="problem">
+            <h2>Problem</h2>
+            <p>
+                Describe the core business challenge, constraints, stakeholders,
+                and why this project was important.
+            </p>
+        </section>
+
+        <!-- SOLUTION -->
+        <section id="solution">
+            <h2>Solution</h2>
+            <p>
+                A detailed description of your solution, steps taken, architecture,
+                frameworks used, data flow, and logic.
+            </p>
+        </section>
+
+        <!-- TECHNICAL BREAKDOWN -->
+        <section id="technical">
+            <h2>Technical Breakdown</h2>
+            <ul>
+                <li>Tech Stack</li>
+                <li>ETL Pipeline Design</li>
+                <li>Data Model</li>
+                <li>ML / Statistical Components</li>
+                <li>Automation & Scheduling</li>
+            </ul>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results">
+            <h2>Impact / Results</h2>
+            <p>
+                Quantify the business benefit — time saved, costs reduced, 
+                accuracy improvements, automation impact, etc.
+            </p>
+        </section>
+
+        <!-- CODE -->
+        <section id="code">
+            <h2>Code Samples</h2>
+            <pre>
+# Python Example
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+df.head()
+            </pre>
+        </section>
+
+        <!-- SCREENSHOTS -->
+        <section id="screenshots">
+            <h2>Screenshots / Architecture</h2>
+            <p>Add diagrams, system architecture, or dashboard screenshots here.</p>
+        </section>
+
+    </section>
+</div>
+
+<!-- SCRIPT: Highlight active section in sidebar -->
+<script>
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".sidebar-nav a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 120;
+            if (scrollY >= top) current = sec.getAttribute("id");
+        });
+
+        navLinks.forEach(a => {
+            a.classList.remove("active");
+            if (a.getAttribute("href").includes(current)) {
+                a.classList.add("active");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
