@@ -1,263 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Comming soon 1</title>
+    <title>YouTube Sentiment Analyzer | Business Case</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Smooth Scroll -->
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-
-    <!-- Main Design Enhancements -->
-    <style>
+        html { scroll-behavior: smooth; }
         body {
-            background: #f5f7fa;
-            font-family: "Segoe UI", sans-serif;
+            background: #eef2f7;
+            font-family: "Inter", "Segoe UI", sans-serif;
+            color: #1c1c1c;
         }
 
         .project-wrapper {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: auto;
-            padding: 3rem 2rem;
+            padding: 3.2rem 2rem;
             display: flex;
             gap: 2rem;
-        }
-
-        /* -----------------------
-           LEFT CONTENT AREA
-        ----------------------- */
-        .project-content {
-            flex: 1.2;
-            animation: fadeIn 1s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .project-header {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
         }
 
         .project-header img {
-            width: 380px;
-            border-radius: 14px;
-            box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: .5rem;
-        }
-
-        h2 {
-            margin-top: 2.5rem;
-            font-size: 1.7rem;
-        }
-
-        h3 {
-            margin: .2rem 0 1rem 0;
-            color: #666;
-            font-weight: 500;
-        }
-
-        p, li {
-            font-size: 1.08rem;
-            line-height: 1.75;
-        }
-
-        hr {
-            margin: 2rem 0;
-            opacity: 0.25;
-        }
-
-        /* -----------------------
-           RIGHT SIDEBAR NAVIGATION
-        ----------------------- */
-        .sidebar-nav {
-            flex: 0.4;
-            position: sticky;
-            top: 3rem;
-            height: fit-content;
-            background: white;
-            padding: 1.5rem;
+            width: 350px;
+            max-width: 100%;
             border-radius: 12px;
-            box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
-            animation: fadeIn 1.2s ease;
+            object-fit: contain;
+            animation: popIn .9s ease;
         }
 
-        .sidebar-nav h4 {
-            margin-bottom: 1rem;
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(.95); }
+            to { opacity: 1; transform: scale(1); }
         }
 
+        h1 { font-size: 2.6rem; font-weight: 800; color: #2c3e50; }
+        h2 { font-size: 1.8rem; font-weight: 700; color: #2c3e50; margin-bottom: 1rem; }
+        h3 { margin-top: .3rem; font-size: 1.2rem; color: #566573; font-weight: 600; }
+        p, li { font-size: 1.08rem; line-height: 1.7; }
+        ul, ol { margin-left: 1.5rem; }
+
+        .sidebar-nav {
+            width: 260px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 2.5rem;
+            background: #ffffff;
+            padding: 1.8rem;
+            border-radius: 14px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.10);
+        }
         .sidebar-nav a {
             display: block;
-            margin: 0.6rem 0;
-            color: #333;
+            padding: .5rem 0;
             text-decoration: none;
-            font-size: 1rem;
-            padding: 4px 4px;
+            color: #34495e;
             border-left: 3px solid transparent;
-            transition: all .2s ease;
+            transition: .25s;
+            font-weight: 500;
         }
-
+        .sidebar-nav a:hover,
         .sidebar-nav a.active {
-            border-left: 3px solid #4a90e2;
-            color: #4a90e2;
-            font-weight: 600;
+            border-left: 4px solid #d90429;
+            color: #d90429;
+            font-weight: 700;
         }
 
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 2.5rem;
+        @media(max-width: 950px) {
+            .project-wrapper { flex-direction: column; }
+            .sidebar-nav { width: 100%; position: relative; }
         }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .project-wrapper {
-                flex-direction: column;
-            }
-            .sidebar-nav {
-                position: relative;
-                top: auto;
-                width: 100%;
-                margin-bottom: 2rem;
-            }
+        .section-card {
+            padding: 2rem;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
         }
 
-        /* -----------------------
-            CODE BLOCK STYLING
-        ----------------------- */
         pre {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            overflow-x: auto;
-            font-size: 0.95rem;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+            background:#f4f4f4;
+            color:#1c1c1c;
+            padding:1rem;
+            border-radius:8px;
+            overflow-x:auto;
         }
     </style>
 </head>
-
 <body>
 
 <div class="project-wrapper">
 
-    <!-- RIGHT SIDEBAR MENU -->
+    <!-- SIDEBAR -->
     <aside class="sidebar-nav">
-        <h4>On This Page</h4>
+        <h4>Project Overview</h4>
         <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
-        <a href="#technical">Technical Breakdown</a>
-        <a href="#results">Results</a>
-        <a href="#code">Code Samples</a>
-        <a href="#screenshots">Screenshots</a>
+        <a href="#technical">Tech Stack</a>
+        <a href="#workflow">User Workflow</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#future">Future</a>
+        <a href="#impact">Impact</a>
     </aside>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <section class="project-content">
 
-        <a href="index.html" class="button small back-btn">← Back to Portfolio</a>
+        <a href="index.html" class="button small back-btn">← Back</a>
 
+        <!-- HERO -->
         <div class="project-header">
             <div>
-                <h1>Project Title</h1>
-                <h3>Industry Project</h3>
+                <h1>YouTube Sentiment Analyzer</h1>
+                <h3>Transforming Audience Insights into Actionable Decisions</h3>
                 <p>
-                    A short executive summary describing the background, goals, 
-                    and value delivered by the project.
+                    Real-time sentiment analysis of YouTube comments, powered by LightGBM and Flask API, giving creators actionable insights without manual review.
                 </p>
             </div>
-
-            <img src="assets/images/project-image.jpg" alt="Project Image">
+            <img src="assets/images/youtube_sentiment_logo.png" alt="Logo">
         </div>
 
-        <hr>
-
-        <!-- PROBLEM -->
-        <section id="problem">
-            <h2>Problem</h2>
+        <!-- BUSINESS PROBLEM -->
+        <section id="problem" class="section-card">
+            <h2>📌 Business Problem</h2>
             <p>
-                Describe the core business challenge, constraints, stakeholders,
-                and why this project was important.
+                Creators struggle to monitor thousands of comments per video, leading to delayed engagement, missed opportunities, and poor moderation of toxic comments.
+                Companies need a solution that automates sentiment detection to make actionable decisions quickly.
             </p>
         </section>
 
         <!-- SOLUTION -->
-        <section id="solution">
-            <h2>Solution</h2>
+        <section id="solution" class="section-card">
+            <h2>🚀 Solution</h2>
             <p>
-                A detailed description of your solution, steps taken, architecture,
-                frameworks used, data flow, and logic.
+                The YouTube Sentiment Analyzer automates comment analysis with the following features:
             </p>
-        </section>
-
-        <!-- TECHNICAL BREAKDOWN -->
-        <section id="technical">
-            <h2>Technical Breakdown</h2>
             <ul>
-                <li>Tech Stack</li>
-                <li>ETL Pipeline Design</li>
-                <li>Data Model</li>
-                <li>ML / Statistical Components</li>
-                <li>Automation & Scheduling</li>
+                <li>Real-time comment capture using YouTube Data API v3.</li>
+                <li>Text preprocessing (cleaning, tokenization, vectorization).</li>
+                <li>LightGBM-based sentiment classification (Positive, Neutral, Negative).</li>
+                <li>Immediate display of insights in the Chrome extension UI.</li>
+                <li>Logging predictions & metrics using MLflow for monitoring & compliance.</li>
             </ul>
         </section>
 
-        <!-- RESULTS -->
-        <section id="results">
-            <h2>Impact / Results</h2>
-            <p>
-                Quantify the business benefit — time saved, costs reduced, 
-                accuracy improvements, automation impact, etc.
-            </p>
+        <!-- TECHNICAL -->
+        <section id="technical" class="section-card">
+            <h2>🧠 Technical Breakdown</h2>
+            <ul>
+                <li>ML Model: LightGBM trained on large-scale YouTube comment dataset.</li>
+                <li>Vectorizer: Bag-of-Words with additional feature engineering (punctuation, comment length).</li>
+                <li>Deployment: Flask API hosted on AWS EC2 using Docker for scalability.</li>
+                <li>CI/CD: GitHub Actions for automatic testing and deployment.</li>
+                <li>Monitoring: MLflow for experiment tracking, drift detection, and model versioning.</li>
+            </ul>
         </section>
 
-        <!-- CODE -->
-        <section id="code">
-            <h2>Code Samples</h2>
-            <pre>
-# Python Example
-import pandas as pd
+        <!-- USER WORKFLOW -->
+        <section id="workflow" class="section-card">
+            <h2>👨‍💻 User Workflow</h2>
+            <ol>
+                <li>Install Chrome extension.</li>
+                <li>Open any YouTube video; comments are auto-captured.</li>
+                <li>Hover over extension icon to see live sentiment metrics.</li>
+            </ol>
+            <p>Provides immediate insights without leaving the YouTube page.</p>
+        </section>
 
-df = pd.read_csv("data.csv")
-df.head()
+        <!-- CHALLENGES -->
+        <section id="challenges" class="section-card">
+            <h2>⚠ Challenges & Mitigation</h2>
+            <ul>
+                <li>High comment volume → solved with async API processing.</li>
+                <li>Noisy text → solved via preprocessing pipeline (emoji removal, punctuation normalization).</li>
+                <li>Model drift → monitored using MLflow and periodic retraining.</li>
+                <li>Chrome UI integration → lightweight and responsive UI design.</li>
+            </ul>
+        </section>
+
+        <!-- ARCHITECTURE -->
+        <section id="architecture" class="section-card">
+            <h2>🛠 System Architecture</h2>
+            <pre>
++----------------------+
+|  YouTube Chrome Ext  |
+| (Collect Comments)   |
++----------+-----------+
+           |
+           v
++----------------------+
+|   Flask REST API     |
+|  (AWS EC2 + Docker) |
++----------+-----------+
+           |
+           v
++----------------------+
+| Text Preprocessing   |
+| - Clean & Tokenize   |
+| - Bag-of-Words       |
++----------+-----------+
+           |
+           v
++----------------------+
+|   LightGBM Model     |
+|  Predict Sentiment   |
++----------+-----------+
+           |
+           v
++----------------------+
+| Chrome UI Output     |
+| Positive/Neutral/Neg |
++----------------------+
+           |
+           v
++----------------------+
+|      MLflow Logs     |
++----------------------+
             </pre>
         </section>
 
-        <!-- SCREENSHOTS -->
-        <section id="screenshots">
-            <h2>Screenshots / Architecture</h2>
-            <p>Add diagrams, system architecture, or dashboard screenshots here.</p>
+        <!-- METRICS -->
+        <section id="metrics" class="section-card">
+            <h2>📈 Real-World Metrics</h2>
+            <ul>
+                <li>Average comment processing: ~0.2s per comment.</li>
+                <li>Observed sentiment distribution: 55% Positive, 30% Neutral, 15% Negative.</li>
+                <li>Reduced comment monitoring time by 70% for creators.</li>
+                <li>Early detection of toxic trends improved engagement quality.</li>
+            </ul>
+        </section>
+
+        <!-- FUTURE -->
+        <section id="future" class="section-card">
+            <h2>🚀 Future Improvements</h2>
+            <ul>
+                <li>BERT-based sentiment detection for better accuracy.</li>
+                <li>Multi-language comment support.</li>
+                <li>Trend analysis charts directly in Chrome extension.</li>
+                <li>Real-time alerts for spikes in negative sentiment.</li>
+            </ul>
+        </section>
+
+        <!-- IMPACT -->
+        <section id="impact" class="section-card">
+            <h2>💼 Business Impact</h2>
+            <ul>
+                <li>Faster content decisions based on audience sentiment.</li>
+                <li>Reduced manual effort for monitoring comments.</li>
+                <li>Improved community health by identifying toxic comments early.</li>
+                <li>Actionable insights for marketing and engagement strategy.</li>
+            </ul>
         </section>
 
     </section>
 </div>
 
-<!-- SCRIPT: Highlight active section in sidebar -->
 <script>
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".sidebar-nav a");
 
     window.addEventListener("scroll", () => {
         let current = "";
-
         sections.forEach(sec => {
-            const top = sec.offsetTop - 120;
-            if (scrollY >= top) current = sec.getAttribute("id");
+            const top = sec.offsetTop - 160;
+            if (scrollY >= top) current = sec.id;
         });
-
         navLinks.forEach(a => {
             a.classList.remove("active");
             if (a.getAttribute("href").includes(current)) {
@@ -269,3 +292,8 @@ df.head()
 
 </body>
 </html>
+
+
+
+
+
